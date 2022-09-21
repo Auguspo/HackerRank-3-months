@@ -9,7 +9,7 @@
 //     M indicates method, C indicates class, and V indicates variable
 //     In the case of a split operation, the words will be a camel case method, class or variable name that you need to split into a space-delimited list of words starting with a lowercase letter.
 //     In the case of a combine operation, the words will be a space-delimited list of words starting with lowercase letters that you need to combine into the appropriate camel case String. Methods should end with an empty set of parentheses to differentiate them from variable names.
-
+ 
 function processData(input) {
   let arr = input.split("\r\n")
 
