@@ -1,24 +1,30 @@
 
-var fs = require('fs');
-var files = fs.readdirSync('./codes/');
+// var fs = require('fs');
+// let files = fs.readdirSync('./codes/');
+let arr = ['Breaking-the-Records.js', 'Camel-Case-4.js', 'Counting-sort-1.js', 'Counting-Valleys.js', 'Diagonal-Difference.js', 'Divisible Sum Pairs.js', 'Find-the-Median.js', 'FizzBuzz.js', 'Flipping-bits.js', 'FlippingMatrix.js', 'Grading-students.js', 'Lonely-Integer.js', 'Mars-Exploration.js', 'Maximun-Perimetrer-Triangle.js', 'Migratory Birds.js', 'Mini-Max-Sum.js', 'Pangrams.js', 'Permuting-Two-Arrays.js', 'Plus-Minus.js', 'Sales-by-match.js', 'Sparse-Arrays.js', 'Subarray-Division-2.js', 'Time-Conversion.js', 'XOR-Strings-3.js', 'Zig-Zag-Sequence.js']
 
-function examples(box){
+
+function examples(files){
 
     let body=``;
-
-    box.forEach(el => {
+    files.forEach(el => {
     body+=`
-    <div>
-    <object  data="./codes/${el}" width="800" height="800">
+    <div class="card m-3">
+    <object  data="./codes/${el}">    
     Not supported
     </object> 
+    <div class="card-body">
+    <h5 class="text-center">${el.replaceAll('-', ' ').slice(0, -3)}</h5>
+    </div>
     </div>      
-    `;});
-console.log(body)
+    `});
+
+   
 
     document.getElementById('boxes').innerHTML = body;
+   
 }
-
+examples(arr)
 
  
 
