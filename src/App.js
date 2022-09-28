@@ -1,45 +1,25 @@
-// import { Dropdown } from 'mdb-ui-kit';
 
-// $(document).ready(function() {
-//     $(".dropdown-toggle").dropdown();
-// });
+var fs = require('fs');
+var files = fs.readdirSync('./codes/');
 
+function examples(box){
 
-const box = document.getElementById('box')
+    let body=``;
 
-const btn = document.getElementById('btn');
+    box.forEach(el => {
+    body+=`
+    <div>
+    <object  data="./codes/${el}" width="800" height="800">
+    Not supported
+    </object> 
+    </div>      
+    `;});
+console.log(body)
 
-btn.addEventListener('click', function handleClick() {
+    document.getElementById('boxes').innerHTML = body;
+}
 
-  
-    if (box.style.display === 'none') {
-    box.style.display = 'block';
-    box2.style.display = 'none';
-
-
-  } else {
-    box.style.display = 'none';
 
  
-  }
-});
-
-const box2 = document.getElementById('box2');
-
-const btn2 = document.getElementById('btn2');
-
-btn2.addEventListener('click', function handleClick() {
-
-  
-    if (box2.style.display === 'none') {
-    box.style.display = 'none';
-
-    box2.style.display = 'block';
 
 
-  } else {
-    box2.style.display = 'none';
-
- 
-  }
-});
