@@ -28,11 +28,12 @@ object {
   border-color: rgba(63, 235, 74, 0);
   width: 40%;
   height: auto;
-  border-radius: 5%;
+  border-radius: 10px;
 }
 
 object {
-  border-radius: 5%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 #box {
