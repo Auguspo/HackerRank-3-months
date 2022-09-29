@@ -10,7 +10,7 @@ function examples(files){
     files.forEach(el => {
     body+=`
     <div class="card m-3">
-    <object  data="./codes/${el}">    
+    <object data="./codes/${el}">    
     Not supported
     </object> 
     <div class="card-body">
@@ -27,5 +27,40 @@ function examples(files){
 examples(arr)
 
  
+const box = document.getElementById('box');
+
+const btn = document.getElementById('btn');
+
+const box1 = document.getElementById('box1');
+
+const btn1 = document.getElementById('btn1');
+
+btn.addEventListener('click', function handleClick() {
+  if (box.style.display === 'none') {
+    box.style.display = 'block'
+    box1.style.display = 'none';
+
+    
+  } else {
+    box.style.display = 'none';
+    box1.style.display = 'block';
+    
+  }
+});
+
+btn1.addEventListener('click', function handleClick() {
+    if (box1.style.display === 'none') {
+        box.style.display = 'none';
+        box1.style.display = 'block';
+  
+      
+    } else {
+        box.style.display = 'block'
+        box1.style.display = 'none';
+      
+    }
+  });
+
+
 
 

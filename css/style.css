@@ -7,7 +7,7 @@ body
   height: 100%;
   width: 100%;}
 
-  object{background-color: rgb(252, 248, 248);}
+  object{background-color: rgb(82, 106, 138);}
 
 #boxes{ 
   height: 100%;
@@ -21,11 +21,37 @@ body
       display: flex;
       flex-direction: column;
       border-color:rgba(63, 235, 74, 0) ;
-      width:20%;
+      width:40%;
       height:auto;
       border-radius: 5%;
     }
 
   object{
     border-radius: 5%;
+    
+  }
+
+  #box{display:none;}
+
+  .title{
+    color:rgb(104, 122, 138);
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    margin-bottom: 25%;
+    
+  }
+
+  .title p{
+    color:rgb(104, 122, 138);
+    margin-top:10px;
+   
+  }
+
+  .container{
+    background-color: rgb(241, 241, 241);
+    border-radius: 10px;
+    
+    width: 60%;
   }
