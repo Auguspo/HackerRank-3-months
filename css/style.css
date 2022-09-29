@@ -1,57 +1,61 @@
-body
-{background-image: linear-gradient(rgba(5,7,12,0.15),rgba(5,7,12,0.85)), url(../css/Fondo.png);
+body {
+  background-image: linear-gradient(rgba(5, 7, 12, 0.15), rgba(5, 7, 12, 0.85)),
+    url(../css/Fondo.png);
   background-repeat: no-repeat;
-  background-position:center center;
-  background-size:cover ;
+  background-position: center center;
+  background-size: cover;
   background-attachment: fixed;
   height: 100%;
-  width: 100%;}
+  width: 100%;
+}
 
-  object{background-color: rgb(82, 106, 138);}
+object {
+  background-color: rgb(82, 106, 138);
+}
 
-#boxes{ 
+#boxes {
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;}
+  justify-content: center;
+}
 
-.card{
-      display: flex;
-      flex-direction: column;
-      border-color:rgba(63, 235, 74, 0) ;
-      width:40%;
-      height:auto;
-      border-radius: 5%;
-    }
+.card {
+  display: flex;
+  flex-direction: column;
+  border-color: rgba(63, 235, 74, 0);
+  width: 40%;
+  height: auto;
+  border-radius: 5%;
+}
 
-  object{
-    border-radius: 5%;
-    
-  }
+object {
+  border-radius: 5%;
+}
 
-  #box{display:none;}
+#box {
+  display: none;
+}
 
-  .title{
-    color:rgb(104, 122, 138);
-    width:80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 5%;
-    margin-bottom: 25%;
-    
-  }
+.title {
+  color: rgb(104, 122, 138);
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 25%;
+}
 
-  .title p{
-    color:rgb(104, 122, 138);
-    margin-top:10px;
-   
-  }
+.title p {
+  color: rgb(104, 122, 138);
+  margin-top: 10px;
+}
 
-  .container{
-    background-color: rgb(241, 241, 241);
-    border-radius: 10px;
-    
-    width: 60%;
-  }
+.container {
+  background-color: rgb(241, 241, 241);
+  border-radius: 10px;
+
+  width: 60%;
+}
