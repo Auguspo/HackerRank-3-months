@@ -1,0 +1,65 @@
+//You will be given a list of integers, arr, and a single integer k. You must create an array of length k from elements of arr such that its unfairness is minimized. Call that array arr´. Unfairness of an array is calculated as max(arr´)-min(arr´)
+'use strict';
+
+const fs = require('fs');
+
+process.stdin.resume();
+process.stdin.setEncoding('utf-8');
+
+let inputString = '';
+let currentLine = 0;
+
+process.stdin.on('data', function(inputStdin) {
+    inputString += inputStdin;
+});
+
+process.stdin.on('end', function() {
+    inputString = inputString.split('\n');
+
+    main();
+});
+
+function readLine() {
+    return inputString[currentLine++];
+}
+
+/*
+ * Complete the 'maxMin' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER k
+ *  2. INTEGER_ARRAY arr
+ */
+
+function maxMin(k, arr) {
+    let sorted = arr.sort((a,b)=> a-b)
+    let min = Number.MAX_VALUE
+
+    for(let i=0; i<( sorted.length - k+1);i++){
+       min = Math.min(min, Math.abs(arr[i] - arr[i+k-1]))
+    }
+    console.log(min);
+return min;
+}
+
+function main() {
+    const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+    const n = parseInt(readLine().trim(), 10);
+
+    const k = parseInt(readLine().trim(), 10);
+
+    let arr = [];
+
+    for (let i = 0; i < n; i++) {
+        const arrItem = parseInt(readLine().trim(), 10);
+        arr.push(arrItem);
+    }
+
+    const result = maxMin(k, arr);
+
+    ws.write(result + '\n');
+
+    ws.end();
+}
